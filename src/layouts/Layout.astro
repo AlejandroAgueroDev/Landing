@@ -1,9 +1,9 @@
 ---
-import Header from './Header.astro';
-import Footer from './Footer.astro';
+import Header from "./Header.astro";
+import Footer from "./Footer.astro";
 
 interface Props {
-	title: string;
+ title: string;
 }
 
 const { title } = Astro.props;
@@ -11,17 +11,20 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="es" class="scroll-smooth">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/public/FORGEXP.png" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<Header/>
-		<slot />
-		<Footer/>
-	</body>
+ <head>
+  <meta charset="UTF-8" />
+  <meta
+   name="description"
+   content="Somos FORGEXP una empresa de tecnología enfocada en tu necesidad personal" 
+  />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image" href="/public/FORGEXP.svg" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{title}</title>
+ </head>
+ <body>
+  <Header />
+  <slot />
+  <Footer />
+ </body>
 </html>
